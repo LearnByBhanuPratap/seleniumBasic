@@ -1,5 +1,6 @@
 package selenium;
 
+import org.testng.annotations.Test;
 import java.sql.Driver;
 import java.text.Format;
 import java.text.ParseException;
