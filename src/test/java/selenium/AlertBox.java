@@ -26,14 +26,17 @@ public class AlertBox {
 			@Test
 			public void verifyNumberOfNavigationMenus() throws InterruptedException {
 					driver.get("file:///Users/bsingh5/Desktop/SeleniumPractices/alert.html");
+					
 					driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+					
 					driver.findElement(By.xpath("html/body/button")).click();
+					
 					Thread.sleep(2000);
 					driver.switchTo().alert().accept();
 			}
 
 			@AfterClass
 			public void endTest() {
-				//driver.close();
+				driver.close();
 			}
 }

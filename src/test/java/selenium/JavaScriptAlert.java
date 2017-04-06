@@ -27,12 +27,19 @@ public class JavaScriptAlert {
 		@Test
 		public void verifyNumberOfNavigationMenus() throws InterruptedException {
 				driver.get("file:///Users/bsingh5/Desktop/SeleniumPractices/javaScriptAlert.html");
+				
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				
 				driver.findElement(By.xpath("html/body/button")).click();
+				
 				Thread.sleep(2000);
+				
 				String text = driver.switchTo().alert().getText();
+				
 				System.out.println(text);
+				
 				Assert.assertEquals(text, "Press a button!");
+				
 				driver.switchTo().alert().dismiss();
 		}
 

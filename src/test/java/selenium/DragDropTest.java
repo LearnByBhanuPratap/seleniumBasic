@@ -27,13 +27,18 @@ public class DragDropTest {
 
 		@Test
 		public void verifyNumberOfNavigationMenus() throws InterruptedException {
+			
 				driver.get("http://jqueryui.com/droppable/");
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 				
 				driver.switchTo().frame(driver.findElement(By.className("demo-frame")));
+				
 				WebElement source = driver.findElement(By.xpath(".//*[@id='draggable']"));
+				
 				WebElement destination = driver.findElement(By.xpath(".//*[@id='droppable']"));
+				
 				Thread.sleep(2000);
+				
 				Actions action = new Actions(driver);
 			
 				action.dragAndDrop(source, destination).perform();
