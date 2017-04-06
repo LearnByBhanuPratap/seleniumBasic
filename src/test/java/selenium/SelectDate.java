@@ -5,11 +5,9 @@ import java.text.Format;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.apache.commons.collections.set.SynchronizedSortedSet;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.Test;
 
 public class SelectDate {
 	@Test
