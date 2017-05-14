@@ -30,7 +30,7 @@ public class SelectDateInCalander {
         
         String[] split = date.split("/");
         String month = split[0]+" "+split[2];
-       
+         System.out.println(month);
       //td[contains(text(),'September 2016')]
         
 		WebDriver driver = new FirefoxDriver();
