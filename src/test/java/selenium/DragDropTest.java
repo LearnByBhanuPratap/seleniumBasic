@@ -3,6 +3,7 @@ package selenium;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -10,6 +11,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
 
 public class DragDropTest {
 	  WebDriver driver;
@@ -42,6 +44,17 @@ public class DragDropTest {
 				Actions action = new Actions(driver);
 			
 				action.dragAndDrop(source, destination).perform();
+				
+				action.moveToElement(driver.findElement(By.xpath(".//*[@id='draggable']")));
+				action.keyDown(Keys.CONTROL);
+				action.moveToElement(driver.findElement(By.xpath(".//*[@id='droppable']")));
+				action.keyUp(Keys.CONTROL);
+				action.build().perform();
+				
+				
+				Actions builder = new Actions(driver);
+
+				
 		}
 
 		@AfterClass
