@@ -1,7 +1,8 @@
 package seleniumExamples;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.Assert;
+
 
 public class Example1 {
 	
@@ -13,7 +14,7 @@ public class Example1 {
 	
 	@Test
 	public void testLogin1(){
-		System.out.println("testLogin() is pass");
+		System.out.println("testLogin1() is pass");
 		Assert.assertTrue(true, "testLogin() is pass");
 	}
 }

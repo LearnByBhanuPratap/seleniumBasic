@@ -11,11 +11,10 @@ public class Retry implements IRetryAnalyzer {
 	    if(retryCount<maxRetryCount){
 	    	System.out.println("Retrying test " + arg0.getName() + " with status " + getResultStatusName(arg0.getStatus()) + " for the " + (retryCount + 1) + " time(s).");
 	    	retryCount++;
-	    	return true;
+	    	return true;	
 	    }
 		return false;
 	}
-
 	public String getResultStatusName(int status) {
 		String resultName = null;
 		if (status == 1)
@@ -25,6 +24,6 @@ public class Retry implements IRetryAnalyzer {
 		if (status == 3)
 			resultName = "SKIP";
 		return resultName;
-	}
-
+	}	
+	
 }
