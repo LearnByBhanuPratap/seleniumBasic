@@ -1,14 +1,17 @@
 package seleniumExamples;
 
 import org.testng.annotations.Test;
+
+import testBase.TestBase;
+
 import org.testng.Assert;
 
 
-public class Example1 {
+public class Example1 extends TestBase{
 	
 	@Test
 	public void testLogin(){
-		//System.out.println("testLogin() is pass");
+		System.out.println("testLogin() is pass");
 		Assert.assertTrue(false, "testLogin() is pass");
 	}
 	
