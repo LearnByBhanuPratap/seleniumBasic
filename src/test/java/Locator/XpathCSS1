@@ -1,0 +1,40 @@
+HTML
+<a href="/projects/" title="Selenium Projects">Projects</a>
+
+X Path
+//tagName[@attributeName='AttributeValue']
+//a[@href='/projects/']
+//a[@title='Selenium Projects']
+CSS
+tagName[attributeName='AttributeValue']
+a[href='/projects/']
+a[title='Selenium Projects']
+
+<a href="/download/" title="Get Selenium">Download</a>
+X Path
+//a[@href='/download/']
+//title[@href='Get Selenium']
+//a[contains(text(),'Download')]
+CSS
+a[href='/download/']
+title[href='Get Selenium']
+
+<li id="menu_documentation">
+  <a href="/docs/" title="Technical references and guides">Documentation</a>
+  
+X Path
+//li[@id='menu_documentation']/a
+//a[@href='/docs/']
+//a[@title='Technical references and guides']
+//a[contains(text(),'Documentation')]
+CSS
+li[id='menu_documentation']>a
+a[title='Technical references and guides']
+
+
+
+
+
+
+
+
