@@ -15,7 +15,7 @@ public class FilterProduct {
 	WebDriver driver;
 
 	@Test
-	public void selectDropDownInSelenium() throws InterruptedException {
+	public void filterProduct() throws InterruptedException {
 		// for Mac OS
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver");
 		// For Window OS

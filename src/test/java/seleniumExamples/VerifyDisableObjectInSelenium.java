@@ -11,7 +11,7 @@ public class VerifyDisableObjectInSelenium {
 	WebDriver driver;
 
 	@Test
-	public void selectDropDownInSelenium() throws InterruptedException {
+	public void verifyDisableObjectInSelenium() throws InterruptedException {
 		// for Mac OS
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver");
 		// For Window OS
