@@ -12,7 +12,7 @@ public class ScrollInSelenium {
 	WebDriver driver;
 
 	@Test
-	public void countNumberOfLinksInPage() throws InterruptedException {
+	public void scrollInSelenium() throws InterruptedException {
 		// for Mac OS
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver");
 		// For Window OS
