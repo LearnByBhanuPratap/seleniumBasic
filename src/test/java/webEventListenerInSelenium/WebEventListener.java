@@ -19,12 +19,12 @@ public class WebEventListener extends TestBase implements WebDriverEventListener
 	}
 
 	public void afterAlertAccept(WebDriver driver) {
-		Reporter.log("alert is accepted");
+		Reporter.log("Alert is accepted");
 		
 	}
 
 	public void afterAlertDismiss(WebDriver driver) {
-		Reporter.log("alert is dismissed");
+		Reporter.log("Alert is dismissed");
 		
 	}
 
@@ -34,11 +34,11 @@ public class WebEventListener extends TestBase implements WebDriverEventListener
 	}
 
 	public void beforeNavigateTo(String url, WebDriver driver) {
-	Reporter.log("navigation to :"+url);
+	Reporter.log("Navigation to :"+url);
 	}
 
 	public void afterNavigateTo(String url, WebDriver driver) {
-		Reporter.log("navigated to :"+url);
+		Reporter.log("Navigated to :"+url);
 		
 	}
 
@@ -73,36 +73,41 @@ public class WebEventListener extends TestBase implements WebDriverEventListener
 	}
 
 	public void beforeFindBy(By by, WebElement element, WebDriver driver) {
-		Reporter.log("finding the element :"+driver.findElement(by).getText());
+		Reporter.log("Finding the element :");
 		Reporter.log(by.toString());
 		
 	}
 
 	public void afterFindBy(By by, WebElement element, WebDriver driver) {
-		Reporter.log("found the element :"+driver.findElement(by).getText());
+		Reporter.log("Found the element :");
 		Reporter.log(by.toString());
 		
 	}
 
 	public void beforeClickOn(WebElement element, WebDriver driver) {
-		Reporter.log("clicking on :"+element.getText());
+		Reporter.log("Clicking on :"+element.getText());
 		Reporter.log(element.toString());
 	}
 
 	public void afterClickOn(WebElement element, WebDriver driver) {
-		Reporter.log("clicked on :"+element.getText());
+		Reporter.log("Clicked on :"+element);
 		Reporter.log(element.toString());
 		
 	}
 
 	public void beforeChangeValueOf(WebElement element, WebDriver driver, CharSequence[] keysToSend) {
-		System.out.println("Value of the:" + element.toString()
+		Reporter.log("Value of the:" + element.toString()
 		+ " before any changes made");
+		
+		Reporter.log("Value of the:" + element.toString()
+		+ keysToSend.toString());
 		
 	}
 
 	public void afterChangeValueOf(WebElement element, WebDriver driver, CharSequence[] keysToSend) {
-		System.out.println("Element value changed to: " + element.toString());
+		Reporter.log("Element value changed to: " + element.toString());
+		Reporter.log("Value of the:" + element.toString()
+		+ keysToSend.toString());
 		
 	}
 
@@ -117,7 +122,7 @@ public class WebEventListener extends TestBase implements WebDriverEventListener
 	}
 
 	public void onException(Throwable throwable, WebDriver driver) {
-		System.out.println("Exception occured: " + error);
+		System.out.println("Exception occured: " + throwable);
 		
 	}
 
