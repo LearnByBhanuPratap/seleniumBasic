@@ -96,12 +96,13 @@ public class WebEventListener extends TestBase implements WebDriverEventListener
 	}
 
 	public void beforeChangeValueOf(WebElement element, WebDriver driver, CharSequence[] keysToSend) {
-		// TODO Auto-generated method stub
+		System.out.println("Value of the:" + element.toString()
+		+ " before any changes made");
 		
 	}
 
 	public void afterChangeValueOf(WebElement element, WebDriver driver, CharSequence[] keysToSend) {
-		// TODO Auto-generated method stub
+		System.out.println("Element value changed to: " + element.toString());
 		
 	}
 
@@ -116,7 +117,7 @@ public class WebEventListener extends TestBase implements WebDriverEventListener
 	}
 
 	public void onException(Throwable throwable, WebDriver driver) {
-		// TODO Auto-generated method stub
+		System.out.println("Exception occured: " + error);
 		
 	}
 
