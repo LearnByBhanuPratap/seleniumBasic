@@ -27,6 +27,7 @@
 
 <parameter name="userName" value="userName123"></parameter>
 <parameter name="password" value="password123"></parameter>
+<parameter name="Browser" value="chrome"></parameter>
 <test name="parameterTest">
 <classes>
 <class name="testNG.ParametersInTestNG"></class>
